@@ -1,0 +1,21 @@
+<ion-view view-title="News Today">
+  <ion-content>
+    <div class="padding" collection-repeat="newsItem in news" ng-click="showDetail(newsItem)">
+    	<div class="item">
+    		<h2>{{newsItem.title}}</h2>
+    	</div>
+		<div class="item item-body"> 
+			<img src="{{newsItem.imageUrl}}" class="full-image">
+			<p ng-bind="newsItem.createdDate | date:'dd-MM-yyyy'"></p>
+		</div>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+
+    <!--<a href="#/detail" class ="button  button-block button-positive">Open Detail Page</a>
+    -->
+    <!--  
+    <a href="/views/detail.html" class ="button  button-block button-positive">Open Detail Page</a> 
+    -->
